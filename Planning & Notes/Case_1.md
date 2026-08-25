@@ -18,19 +18,31 @@ Jullien Moreau - Younger Brother
 	After Pierre’s father died, the two brothers were given something in the will. Pierre got the house- the one he lives today in, and Jullien got the vineyard, forcing him to work their- the terms of his will didn’t allow him to sell the vineyard.
 
 Then you can choose somebody to interview
+(new line = different characrer talking, bold = choice as question)
 
 Hugo Bernard: 
+_Hugo wears glasses, and has sweaty forehead_
 Hello Mr.Bernard, how are you today?
 I’m ok, thank you. How about you
 I’m fine. I have brought you here today to ask a few questions.
 Okay, fine.
-Did you notice that Mr Dubois was gone from later than normal on the date of his death?
+**Did you notice that Mr Dubois was gone from later than normal on the date of his death?**
 Yes. He left at 12:00, I heard him talking to other co-workers, saying he was tired and needed a rest, just him and a glass of wine.
-Did Mr Dubois normally leave from work early?
-Did you an Mr Dubois get along well?
-Where were you between 1pm and 3pm that day?
+**Did Mr Dubois normally leave from work early?**
+Yes. I don't beleive that he worked very hard, from my experience as being his colleuge.
+And how long have you known him?
+I have been working at Gabriel Enterprise for 3 years now, just when I met Pierre.
+**Did you an Mr Dubois get along well?**
+If you would like my honest oppinion, well. No not really. Pierre was just very stubborn, and he wouldn't listen to any of my ideas. 
+**Where were you between 3pm and 4pm that day?**
+I was in the office. Working.
+Can anybody vouch for you?
+I beleive in this case, no. There was a staff lunch party that I didn't attend.
+Why not?
+I don't like those sort of things. Talking to people who are less inteligent than me bores me.
 
 Manon Dubois:
+
 
 Cammile Russau:
 
