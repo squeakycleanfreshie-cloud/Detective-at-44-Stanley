@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://wo817mpbe4i1"]
-
-[ext_resource type="Script" uid="uid://c3dds88sufydk" path="res://Scenes/Menus/Option Screen/options.gd" id="1_kv3oe"]
-
-[node name="Options" type="Node2D" unique_id=344556890]
-script = ExtResource("1_kv3oe")
