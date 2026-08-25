@@ -1,3 +1,69 @@
 [gd_scene format=3 uid="uid://dh6r7xb7tx0x8"]
 
-[node name="Main" type="Node2D" unique_id=727416032]
+[ext_resource type="Script" uid="uid://d4mfib6lj4erq" path="res://Scenes/Menus/start.gd" id="1_lyihy"]
+[ext_resource type="Script" uid="uid://bkrr5mu41ntsw" path="res://Scenes/Menus/main.gd" id="1_m0do8"]
+[ext_resource type="Script" uid="uid://cv3ppxl23dqnn" path="res://Scenes/Menus/options.gd" id="2_jm5y7"]
+[ext_resource type="Script" uid="uid://qhmnet3rhy5o" path="res://Scenes/Menus/quit.gd" id="3_m0do8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07orm"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gc083"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjmp5"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Main Menu" type="Control" unique_id=24650008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m0do8")
+
+[node name="Panel" type="Panel" parent="." unique_id=203174179]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main Menu Buttons" type="VBoxContainer" parent="." unique_id=868429626]
+layout_mode = 0
+offset_left = 129.00002
+offset_top = 240.00002
+offset_right = 729.0
+offset_bottom = 373.0
+scale = Vector2(1.4964128, 2.1686804)
+theme_override_constants/separation = 20
+
+[node name="Start" type="Button" parent="Main Menu Buttons" unique_id=482600020]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_07orm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_07orm")
+text = "Start"
+script = ExtResource("1_lyihy")
+
+[node name="Options" type="Button" parent="Main Menu Buttons" unique_id=1354078082]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_gc083")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_gc083")
+text = "Options"
+script = ExtResource("2_jm5y7")
+
+[node name="Quit" type="Button" parent="Main Menu Buttons" unique_id=984272557]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_qjmp5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_qjmp5")
+text = "Quit"
+script = ExtResource("3_m0do8")
+
+[connection signal="pressed" from="Main Menu Buttons/Start" to="Main Menu Buttons/Start" method="_on_pressed"]
+[connection signal="pressed" from="Main Menu Buttons/Options" to="Main Menu Buttons/Options" method="_on_pressed"]
+[connection signal="pressed" from="Main Menu Buttons/Quit" to="Main Menu Buttons/Quit" method="_on_pressed"]
