@@ -42,6 +42,7 @@ Why not?
 I don't like those sort of things. Talking to people who are less inteligent than me bores me.
 
 Manon Dubois:
+<<<<<<< HEAD
 **Where were you between 3pm and 4pm before you left to walk the dog?**
 **What time did you actually leave to walk the dog?**
 **Did Pierre have any prescriptions or medications in the house? Whose eye drops were in the bathroom?**
@@ -63,4 +64,12 @@ Jullien Moreau:
 **Do you blame Pierre for how the inheritance was split?**
 **Did you visit the house that day, or know Pierre's schedule?**
 **Do you have access to any of Pierre's medications, or Manon's?**
+=======
+
+
+Cammile Russau:
+
+Jullien Moreau:
+
+>>>>>>> e317da509e2978f51109b7f1f71ee1632bc1c4fe
 
