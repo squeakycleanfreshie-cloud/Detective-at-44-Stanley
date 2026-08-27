@@ -1515,11 +1515,13 @@ screen suspect_lineup:
                         xalign 0.5
                         add sid:
                             alpha (0.35 if sid in questioned else 1.0)
-                        text sname:
-                            xalign 0.5
-                            color "#ffffff"
+                        frame:
                             background "#000000"
-                            size 16
+                            padding (4, 2)
+                            text sname:
+                                xalign 0.5
+                                color "#ffffff"
+                                size 16
 
     textbutton "Make accusation":
         xalign 0.5 yalign 0.95

@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/screens.rpy", line 1521: 'background' is not a keyword argument or valid child of the text statement.
+    background "#000000"
+              ^
+
+Ren'Py Version: Ren'Py 8.5.3.26051504
+Thu Aug 27 17:54:43 2026

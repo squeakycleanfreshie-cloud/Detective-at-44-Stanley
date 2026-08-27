@@ -9,6 +9,11 @@ define manon = Character("Manon Dubois")
 define cammile = Character("Cammile Russau")
 define jullien = Character("Jullien Moreau")
 
+image hugo = "images/hugo.png"
+image manon = "images/manon.png"
+image cammile = "images/cammile.png"
+image jullien = "images/jullien.png"
+
 label start:
     n "Septemer 2nd 1945, the day the second world war ended and the day the world thought it would see peace"
     n "But that was not the case, especially in the small city of Saintclairemont where crime has reached a record high"
@@ -104,7 +109,7 @@ label case_1:
     show text "Manon Dubois - Partner" with dissolve
     pause(1.0)
     "Pierre and Manon do not have a prenup, nor are they married"
-    "This would mean non of his wealth go to Manon if she murdered him..."
+    "This would mean none of his wealth go to Manon if she murdered him..."
     hide text with dissolve
 
     show text "Cammile Russau - Neighbour" with dissolve
@@ -119,4 +124,35 @@ label case_1:
     "Pierre got the house in which he resided in and Julien got the vineyard"
     "Forcing Julien to work there as the terms did not allow him to sell the vineyard"
 
-    
+    hide text with dissolve
+
+    $ questioned = set()
+    jump suspect_lineup_label
+
+label suspect_lineup_label:
+    call screen suspect_lineup
+
+
+label interrogate_hugo:
+    $ questioned.add("hugo")
+    "You question Hugo. (dialogue goes here)"
+    jump suspect_lineup_label
+
+label interrogate_manon:
+    $ questioned.add("manon")
+    "You question Manon. (dialogue goes here)"
+    jump suspect_lineup_label
+
+label interrogate_cammile:
+    $ questioned.add("cammile")
+    "You question Cammile. (dialogue goes here)"
+    jump suspect_lineup_label
+
+label interrogate_jullien:
+    $ questioned.add("jullien")
+    "You question Jullien. (dialogue goes here)"
+    jump suspect_lineup_label
+
+label accusation_screen_label:
+    "Accusation screen goes here."
+    return

@@ -1,32 +1,19 @@
-2026-08-26 22:18:09 UTC
+2026-08-27 07:52:58 UTC
 macOS-26.6-arm64-arm-64bit
 Ren'Py 8.5.3.26051504
 
-Early init took 25 ms
-Loading error handling took 4315 ms
-Loading script took 6146 ms
-Loading save slot metadata took 16 ms
-Loading persistent took 3 ms
-Running init code took 31 ms
-Loading analysis data took 1875 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 2 ms
-Backing up script files to '/Users/remymoreau/Library/RenPy/backups/Detective-at-44-Stanley-main':
-Dump and make backups took 55 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 27 ms
+Early init took 29 ms
+Loading error handling took 72 ms
+1 script files skipped.
+Loading script took 291 ms
+Loading save slot metadata took 27 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 1521: 'background' is not a keyword argument or valid child of the text statement.
+    background "#000000"
+              ^
 DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 5 ms
-Save screen analysis took 7 ms
-Save pyanalysis took 0 ms
-Save bytecode took 16 ms
-Running _start took 1 ms
-Interface start took 3048 ms
+Interface start took 1455 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1470, 956)
@@ -38,6 +25,156 @@ Version: '2.1 Metal - 90.5'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(2368, 1332)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1184, 734) drawable=(2368, 1468)
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 17 ms
+1 script files skipped.
+Loading script took 60 ms
+Loading save slot metadata took 7 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 1521: 'background' is not a keyword argument or valid child of the text statement.
+    background "#000000"
+              ^
+DPI scale factor: 1.000000
+Interface start took 63 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M2'
+Version: '2.1 Metal - 90.5'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(2368, 1332)
 Maximum texture size: 4096x4096
-Resize event: <Event(65533-VIDEORESIZE h=734, mod=0, size=(1184, 734), w=1184)>
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 15 ms
+1 script files skipped.
+Loading script took 46 ms
+Loading save slot metadata took 5 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 1521: 'background' is not a keyword argument or valid child of the text statement.
+    background "#000000"
+              ^
+DPI scale factor: 1.000000
+Interface start took 48 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M2'
+Version: '2.1 Metal - 90.5'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(2368, 1332)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3 ms
+Loading error handling took 21 ms
+Loading script took 119 ms
+Loading save slot metadata took 6 ms
+Loading persistent took 0 ms
+Running init code took 24 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 1 ms
+Backing up script files to '/Users/remymoreau/Library/RenPy/backups/Detective-at-44-Stanley-main':
+Dump and make backups took 22 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 19 ms
+DPI scale factor: 1.000000
+Creating interface object took 2 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 4 ms
+Save bytecode took 2 ms
+Running _start took 2 ms
+Interface start took 166 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M2'
+Version: '2.1 Metal - 90.5'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(2368, 1332)
+Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 25 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(2940, 1846)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 923) drawable=(2940, 1846)
+Maximum texture size: 4096x4096
+Resize event: <Event(65533-VIDEORESIZE h=923, mod=0, size=(1470, 923), w=1470)>
+Cleaning stores took 0 ms
+Load screen analysis took 20 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 23 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 11 ms
+Loading script took 57 ms
+Loading save slot metadata took 7 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 2 ms
+Backing up script files to '/Users/remymoreau/Library/RenPy/backups/Detective-at-44-Stanley-main':
+Dump and make backups took 22 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 25 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 130 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M2'
+Version: '2.1 Metal - 90.5'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1470, 895) drawable=(2940, 1790)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 895) drawable=(2940, 1790)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
+Maximum texture size: 4096x4096
+Resize event: <Event(65533-VIDEORESIZE h=785, mod=0, size=(1470, 785), w=1470)>
+Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1846)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 923) drawable=(2940, 1846)
+Maximum texture size: 4096x4096
+Resize event: <Event(65533-VIDEORESIZE h=923, mod=0, size=(1470, 923), w=1470)>
+Cleaning stores took 0 ms
+Load screen analysis took 26 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
