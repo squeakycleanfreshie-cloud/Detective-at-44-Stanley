@@ -1,6 +1,6 @@
 ﻿#Characters - Important
 define n = Character("Narrator")
-define mc = Character("Jan Paul")
+define mc = Character("Jean Paul")
 define officer = Character("Officer Benjamin Chateaurouxette")
 #Characters - Suspects
 #Case 1
@@ -14,7 +14,7 @@ label start:
     n "But that was not the case, especially in the small city of Saintclairemont where crime has reached a record high"
     n "And that is where you come in"
     n  "A private investigator known through out France for never failing to solve a case"
-    n "Detective Jan Paul"
+    n "Detective Jean Paul"
     n "Will you be able to solve the cases here..."
     n "Or will you finally fail due to the criminals of Saintclairemont"
 
@@ -32,7 +32,7 @@ label opening:
 
     "You enter the building"
 
-    officer "Bonjour, vous devez être le nouveau détective M. Jan Paul, enchanté. Je suis l'officier Benjamin"
+    officer "Bonjour, vous devez être le nouveau détective Mr. Jean Paul, enchanté. Je suis l'officier Benjamin"
 
     mc "I'm sorry I don't speak French"
 
@@ -45,19 +45,21 @@ label opening:
     officer "You will have to look through the case file and then question them all to hear their side of the story"
     officer "Be vigilant as only one is right and the rest are criminals, one wrong guess and you're head will be cut off faster than the line at the baguette store when I arrive"
 
-    mc "That is very useful information I will remember that"
-    mc "Is there any new case"
+    mc "That is very useful information. I will remember that"
+    mc "Are there any new cases for me to take?"
 
-    officer "You're one eager man. Check on the counter for a file named Case #01 "
+    officer "You're one eager man Jean. Check on the counter for a file named Case #01 "
 
     "You approach the counter and see to files"
 
     menu:
         "What will you pick"
-        "Mr.Benjamin baguette story":
+        "Mr.Benjamin baguette Story":
             jump extra_1
         "Case #01":
             jump case_1
+        "Case #02":
+            jump case_2
 
 label extra_1:
     officer "In America there is a popular saying amongst the young enfant"
@@ -69,7 +71,7 @@ label extra_1:
     officer "I followed it around my house all the way to my backyard and what I saw......."
     officer "It was....."
     officer "MY BEST FRIEND EATING THEM QUICKLY WHILE SITTING ON MY CHAIR!!!"
-    officer "Pourquoi"
+    officer "Pourquoi????!"
 
     mc "What did I just read, let me focus on the actual case now"
     jump case_1
@@ -80,7 +82,7 @@ label case_1:
     hide text with dissolve
     pause(1.0)
 
-    n "Pierre os a ,am who lives on Rue d'eglise, a street near the Stanley building"
+    n "Pierre is a man who lives on Rue d'eglise, a street near the Stanley building"
     n "He is 35 years of age. He was found dead at 4:14pm by his partner, who went out to walk their dog"
     n "She reports he was supposed to be at work, and left around 8:00am"
     n "She left to walk the dog around 3:10pm, so he must have returned and was murdered around that one minute window"
@@ -117,4 +119,4 @@ label case_1:
     "Pierre got the house in which he resided in and Julien got the vineyard"
     "Forcing Julien to work there as the terms did not allow him to sell the vineyard"
 
-
+    
