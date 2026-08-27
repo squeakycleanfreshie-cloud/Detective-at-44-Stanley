@@ -133,22 +133,22 @@ label suspect_lineup_label:
 
 label interrogate_hugo:
     $ questioned.add("hugo")
-    "You question Hugo. (dialogue goes here)"
+    "You question Hugo."
     jump suspect_lineup_label
 
 label interrogate_manon:
     $ questioned.add("manon")
-    "You question Manon. (dialogue goes here)"
+    "You question Manon."
     jump suspect_lineup_label
 
 label interrogate_cammile:
     $ questioned.add("cammile")
-    "You question Cammile. (dialogue goes here)"
+    "You question Cammile."
     jump suspect_lineup_label
 
 label interrogate_jullien:
     $ questioned.add("jullien")
-    "You question Jullien. (dialogue goes here)"
+    "You question Jullien."
     jump suspect_lineup_label
 
 label accusation_screen_label:
