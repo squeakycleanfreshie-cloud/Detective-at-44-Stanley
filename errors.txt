@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1521: 'background' is not a keyword argument or valid child of the text statement.
-    background "#000000"
+File "game/notepad.rpy", line 51: 'background' is not a keyword argument or valid child of the input statement.
+    background "#f4f1e8"
               ^
 
 Ren'Py Version: Ren'Py 8.5.3.26051504
-Thu Aug 27 17:54:43 2026
+Thu Aug 27 18:26:28 2026

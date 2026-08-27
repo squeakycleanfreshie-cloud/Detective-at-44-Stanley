@@ -53,18 +53,16 @@ label opening:
     mc "That is very useful information. I will remember that"
     mc "Are there any new cases for me to take?"
 
-    officer "You're one eager man Jean. Check on the counter for a file named Case #01 "
+    officer "You're one eager man Jean. Check on the counter for a file named Case One "
 
     "You approach the counter and see to files"
 
     menu:
         "What will you pick"
-        "Mr.Benjamin baguette Story":
+        "Officer Benjamin's Baguette Report":
             jump extra_1
         "Case #01":
             jump case_1
-        "Case #02":
-            jump case_2
 
 label extra_1:
     officer "In America there is a popular saying amongst the young enfant"

@@ -1,0 +1,23 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 67, in script
+    jump case_2
+renpy.script.LabelNotFound: could not find label 'case_2'. Did you mean: 'case_1'?
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "game/script.rpy", line 67, in script
+    jump case_2
+  File "renpy/ast.py", line 1938, in execute
+    rv = renpy.game.script.lookup(target)
+         ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "renpy/script.py", line 1217, in lookup
+    raise LabelNotFound(original)
+renpy.script.LabelNotFound: could not find label 'case_2'. Did you mean: 'case_1'?
+
+macOS-26.6-arm64-arm-64bit arm64
+Ren'Py 8.5.3.26051504
+Detective at 44 Stanley 1.0
+Thu Aug 27 18:56:23 2026
