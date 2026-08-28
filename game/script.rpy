@@ -14,6 +14,11 @@ image manon = "images/manon.png"
 image cammile = "images/cammile.png"
 image jullien = "images/jullien.png"
 
+default hugo_asked = set()
+default manon_asked = set()
+default cammile_asked = set()
+default jullien_asked = set()
+
 label start:
     n "Septemer 2nd 1945, the day the second world war ended and the day the world thought it would see peace"
     n "But that was not the case, especially in the small city of Saintclairemont where crime has reached a record high"
@@ -59,10 +64,11 @@ label opening:
 
     menu:
         "What will you pick"
-        "Officer Benjamin's Baguette Report":
-            jump extra_1
         "Case #01":
             jump case_1
+        "Bonus: Officer Benjamin's Baguette Report":
+            jump extra_1
+
 
 label extra_1:
     officer "In America there is a popular saying amongst the young enfant"
@@ -133,23 +139,169 @@ label suspect_lineup_label:
 
 label interrogate_hugo:
     $ questioned.add("hugo")
-    "You question Hugo."
-    jump suspect_lineup_label
+    if len(hugo_asked) == 0:
+        n "You question Hugo."
+        n "Hugo wears glasses, and has sweaty forehead"
+        mc "Hello Mr.Bernard, how are you today?"
+        hugo "I’m ok, thank you. How about you?"
+        mc "I’m fine. I have brought you here today to ask a few questions."
+        hugo "Okay, fine."
+    jump hugo_menu
+
+label hugo_menu:
+    if len(hugo_asked) >= 3:
+        jump suspect_lineup_label
+
+    menu:
+        "Pick a question to ask Hugo. ([hugo_asked_left] left)":
+            pass
+
+        "Did you notice that Mr Dubois was gone from later than normal on the date of his death?" if "q1" not in hugo_asked:
+            $ hugo_asked.add("q1")
+            mc "Did you notice that Mr Dubois was gone from later than normal on the date of his death?"
+            hugo "Yes. He left at 12:00, I heard him talking to other co-workers, saying he was tired and needed a rest, just him and a glass of wine."
+
+        "Did Mr Dubois normally leave from work early?" if "q2" not in hugo_asked:
+            $ hugo_asked.add("q2")
+            mc "Did Mr Dubois normally leave from work early?"
+            hugo "Yes. I don't beleive that he worked very hard, from my experience as being his colleuge."
+            mc "And how long have you known him?"
+            hugo "I have been working at Gabriel Enterprise for 3 years now, just when I met Pierre."
+
+        "Did you an Mr Dubois get along well?" if "q3" not in hugo_asked:
+            $ hugo_asked.add("q3")
+            mc "Did you an Mr Dubois get along well?"
+            hugo "If you would like my honest oppinion, well. No not really. Pierre was just very stubborn, and he wouldn't listen to any of my ideas."
+
+        "Where were you between 3pm and 4pm that day?" if "q4" not in hugo_asked:
+            $ hugo_asked.add("q4")
+            mc "Where were you between 3pm and 4pm that day?"
+            hugo "I was in the office. Working."
+            mc "Can anybody vouch for you?"
+            hugo "I beleive in this case, no. There was a staff lunch party that I didn't attend."
+            mc "Why not? I don't like those sort of things. Talking to people who are less inteligent than me bores me."
+
+    jump hugo_menu
+
 
 label interrogate_manon:
     $ questioned.add("manon")
-    "You question Manon."
-    jump suspect_lineup_label
+    if len(manon_asked) == 0:
+        n "You question Manon."
+    jump manon_menu
+
+label manon_menu:
+    if len(manon_asked) >= 3:
+        jump suspect_lineup_label
+
+    menu:
+        "Pick a question to ask Manon. ([manon_asked_left] left)":
+            pass
+
+        "Where were you between 3pm and 4pm before you left to walk the dog?" if "q1" not in manon_asked:
+            $ manon_asked.add("q1")
+            mc "Where were you between 3pm and 4pm before you left to walk the dog?"
+
+        "What time did you actually leave to walk the dog?" if "q2" not in manon_asked:
+            $ manon_asked.add("q2")
+            mc "What time did you actually leave to walk the dog?"
+
+        "Did Pierre have any prescriptions or medications in the house?" if "q3" not in manon_asked:
+            $ manon_asked.add("q3")
+            mc "Did Pierre have any prescriptions or medications in the house?"
+
+        "Whose eye drops were in the bathroom? Did you know Hugo well?" if "q4" not in manon_asked:
+            $ manon_asked.add("q4")
+            mc "Whose eye drops were in the bathroom? Did you know Hugo well?"
+
+        "What did Pierre say about him? Was Pierre acting normal that morning before he left for work?" if "q5" not in manon_asked:
+            $ manon_asked.add("q5")
+            mc "What did Pierre say about him? Was Pierre acting normal that morning before he left for work?"
+
+        "Why no prenup or marriage after this long together?" if "q6" not in manon_asked:
+            $ manon_asked.add("q6")
+            mc "Why no prenup or marriage after this long together?"
+
+        "Who else had access to the house that day?" if "q7" not in manon_asked:
+            $ manon_asked.add("q7")
+            mc "Who else had access to the house that day?"
+
+    jump manon_menu
+
 
 label interrogate_cammile:
     $ questioned.add("cammile")
-    "You question Cammile."
-    jump suspect_lineup_label
+    if len(cammile_asked) == 0:
+        n "You question Cammile."
+    jump cammile_menu
+
+label cammile_menu:
+    if len(cammile_asked) >= 3:
+        jump suspect_lineup_label
+
+    menu:
+        "Pick a question to ask Cammile. ([cammile_asked_left] left)":
+            pass
+
+        "You said you were home all day — did you see Pierre come back before 4:14pm?" if "q1" not in cammile_asked:
+            $ cammile_asked.add("q1")
+            mc "You said you were home all day — did you see Pierre come back before 4:14pm?"
+
+        "Did you see anyone else visit the house that afternoon?" if "q2" not in cammile_asked:
+            $ cammile_asked.add("q2")
+            mc "Did you see anyone else visit the house that afternoon?"
+
+        "How far is your place from theirs — could you hear or see the front door?" if "q3" not in cammile_asked:
+            $ cammile_asked.add("q3")
+            mc "How far is your place from theirs — could you hear or see the front door?"
+
+        "Did your complaints about the dog ever turn into direct conflict with Pierre or just Manon?" if "q4" not in cammile_asked:
+            $ cammile_asked.add("q4")
+            mc "Did your complaints about the dog ever turn into direct conflict with Pierre or just Manon?"
+
+        "Do you have any medical background, or access to medication like eye drops/heart drugs?" if "q5" not in cammile_asked:
+            $ cammile_asked.add("q5")
+            mc "Do you have any medical background, or access to medication like eye drops/heart drugs?"
+
+    jump cammile_menu
+
 
 label interrogate_jullien:
     $ questioned.add("jullien")
-    "You question Jullien."
-    jump suspect_lineup_label
+    if len(jullien_asked) == 0:
+        n "You question Jullien."
+    jump jullien_menu
+
+label jullien_menu:
+    if len(jullien_asked) >= 3:
+        jump suspect_lineup_label
+
+    menu:
+        "Pick a question to ask Jullien. ([jullien_asked_left] left)":
+            pass
+
+        "Where were you between 3pm and 4pm that day?" if "q1" not in jullien_asked:
+            $ jullien_asked.add("q1")
+            mc "Where were you between 3pm and 4pm that day?"
+
+        "Have you spoken to Pierre recently about the will or the vineyard?" if "q2" not in jullien_asked:
+            $ jullien_asked.add("q2")
+            mc "Have you spoken to Pierre recently about the will or the vineyard?"
+
+        "Do you blame Pierre for how the inheritance was split?" if "q3" not in jullien_asked:
+            $ jullien_asked.add("q3")
+            mc "Do you blame Pierre for how the inheritance was split?"
+
+        "Did you visit the house that day, or know Pierre's schedule?" if "q4" not in jullien_asked:
+            $ jullien_asked.add("q4")
+            mc "Did you visit the house that day, or know Pierre's schedule?"
+
+        "Do you have access to any of Pierre's medications, or Manon's?" if "q5" not in jullien_asked:
+            $ jullien_asked.add("q5")
+            mc "Do you have access to any of Pierre's medications, or Manon's?"
+
+    jump jullien_menu
+
 
 label accusation_screen_label:
     "Accusation screen goes here."
