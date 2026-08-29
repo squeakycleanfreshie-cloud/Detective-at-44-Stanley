@@ -1,7 +1,11 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< HEAD
   File "game/script.rpy", line 200, in script
+=======
+  File "game/script.rpy", line 279, in script
+>>>>>>> e8b1db4 (i forgot)
     menu:
   File "game/screens.rpy", line 179, in execute
     screen choice(items):
@@ -13,12 +17,20 @@ While running game code:
     for i in items:
   File "game/screens.rpy", line 184, in execute
     textbutton i.caption action i.action
+<<<<<<< HEAD
 NameError: name 'manon_asked_left' is not defined. Did you mean: 'hugo_asked_left'?
+=======
+NameError: name 'jullien_asked_left' is not defined. Did you mean: 'jullien_asked'?
+>>>>>>> e8b1db4 (i forgot)
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "game/script.rpy", line 200, in script
+=======
+  File "game/script.rpy", line 279, in script
+>>>>>>> e8b1db4 (i forgot)
     menu:
   File "renpy/ast.py", line 1825, in execute
     choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
@@ -100,9 +112,17 @@ Traceback (most recent call last):
     return eval(bytecode, globals, locals)
            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "<none>", line 1, in <module>
+<<<<<<< HEAD
 NameError: name 'manon_asked_left' is not defined. Did you mean: 'hugo_asked_left'?
+=======
+NameError: name 'jullien_asked_left' is not defined. Did you mean: 'jullien_asked'?
+>>>>>>> e8b1db4 (i forgot)
 
 Windows-10-10.0.19041-SP0 AMD64
 Ren'Py 8.5.3.26051504
 Detective at 44 Stanley 1.0
+<<<<<<< HEAD
 Sat Aug 29 16:22:23 2026
+=======
+Fri Aug 28 12:33:14 2026
+>>>>>>> e8b1db4 (i forgot)

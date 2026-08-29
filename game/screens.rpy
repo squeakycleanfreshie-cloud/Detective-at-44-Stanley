@@ -31,6 +31,7 @@ style button:
 style button_text is gui_text:
     properties gui.text_properties("button")
     yalign 0.5
+    font "Mom.ttf"
 
 
 style label_text is gui_text:
@@ -200,6 +201,7 @@ style choice_button is default:
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
+    font "Mom.ttf"
 
 
 ## Quick Menu screen ###########################################################
@@ -242,6 +244,7 @@ style quick_button:
 
 style quick_button_text:
     properties gui.text_properties("quick_button")
+    font "Mom.ttf"
 
 
 ################################################################################
@@ -1138,7 +1141,7 @@ style skip_text:
     size gui.notify_text_size
 
 style skip_triangle:
-    font "DejaVuSans.ttf"
+    font "OldNewspaper.ttf"
 
 
 ## Notify screen ###############################################################
@@ -1492,7 +1495,7 @@ screen suspect_lineup:
 
     vbox:
         xalign 0.5 yalign 0.05
-        text "Pick a character to interrogate" size 26 color "#ffffff"
+        text "Pick a character to interrogate" size 26 color "#ffffff" font "Mom.ttf"
 
     hbox:
         xalign 0.5 yalign 0.5
@@ -1522,6 +1525,7 @@ screen suspect_lineup:
                                 xalign 0.5
                                 color "#ffffff"
                                 size 16
+                                font "Mom.ttf"
 
     textbutton "Make accusation":
         xalign 0.5 yalign 0.95
