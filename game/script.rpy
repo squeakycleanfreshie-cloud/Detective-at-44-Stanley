@@ -152,6 +152,8 @@ label hugo_menu:
     if len(hugo_asked) >= 3:
         jump suspect_lineup_label
 
+    $ hugo_asked_left = 3 - len(hugo_asked)
+
     menu:
         "Pick a question to ask Hugo. ([hugo_asked_left] left)":
             pass
@@ -179,7 +181,8 @@ label hugo_menu:
             hugo "I was in the office. Working."
             mc "Can anybody vouch for you?"
             hugo "I beleive in this case, no. There was a staff lunch party that I didn't attend."
-            mc "Why not? I don't like those sort of things. Talking to people who are less inteligent than me bores me."
+            mc "Why not?"
+            hugo "I don't like those sort of things. Talking to people who are less inteligent than me bores me."
 
     jump hugo_menu
 
@@ -191,10 +194,14 @@ label interrogate_manon:
     jump manon_menu
 
 label manon_menu:
-    if len(manon_asked) >= 3:
+    if len(manon_asked) >= 5:
         jump suspect_lineup_label
 
+    $ manon_asked_left = 5 - len(manon_asked)
+
     menu:
+
+
         "Pick a question to ask Manon. ([manon_asked_left] left)":
             pass
 
@@ -239,6 +246,8 @@ label cammile_menu:
     if len(cammile_asked) >= 3:
         jump suspect_lineup_label
 
+    $ cammile_asked_left = 3 - len(cammile_asked)
+
     menu:
         "Pick a question to ask Cammile. ([cammile_asked_left] left)":
             pass
@@ -275,6 +284,8 @@ label interrogate_jullien:
 label jullien_menu:
     if len(jullien_asked) >= 3:
         jump suspect_lineup_label
+
+    $ jullien_asked_left = 3 - len(jullien_asked)
 
     menu:
         "Pick a question to ask Jullien. ([jullien_asked_left] left)":

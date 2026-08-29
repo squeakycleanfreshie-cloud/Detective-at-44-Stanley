@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/notepad.rpy", line 51: 'background' is not a keyword argument or valid child of the input statement.
-    background "#f4f1e8"
-              ^
+File "game/script.rpy", line 202: expected menuitem
+    $ manon_asked_left = 7 - len(manon_asked)
+    ^
 
 Ren'Py Version: Ren'Py 8.5.3.26051504
-Thu Aug 27 18:26:28 2026
+Sat Aug 29 16:23:49 2026

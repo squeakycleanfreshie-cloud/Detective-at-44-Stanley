@@ -1,649 +1,717 @@
-2026-08-27 08:35:29 UTC
-macOS-26.6-arm64-arm-64bit
+2026-08-29 14:06:32 UTC
+Windows-10-10.0.19041-SP0
 Ren'Py 8.5.3.26051504
 
-Early init took 26 ms
-Loading error handling took 24 ms
-Loading script took 399 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 42 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 3 ms
-Dump and make backups took 22 ms
+Early init took 429 ms
+Loading error handling took 462 ms
+Loading script took 6248 ms
+Loading save slot metadata took 876 ms
+Loading persistent took 1 ms
+ - Init at renpy/common/00updater.rpy:23 took 289 ms.
+ - Init at game/gui.rpy:11 took 256 ms.
+Running init code took 1104 ms
+Loading analysis data took 58 ms
+Analyze and compile ATL took 10 ms
+Reloading save slot metadata took 97 ms
+Dump and make backups took 330 ms
 Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 20 ms
+Making clean stores took 1 ms
+Initial gc took 638 ms
 DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 10 ms
-Analyze screens took 1 ms
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 277 ms
+Init translation took 1 ms
+Cleaning stores took 1 ms
+Load screen analysis took 466 ms
+Analyze screens took 7 ms
 Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 16 ms
-Running _start took 1 ms
-Interface start took 610 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 90.5'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "renpy/ast.py", line 1193, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1276, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-    ~~~~~~~~~~~^^
-  File "renpy/ui.py", line 306, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 2163, in interact
-    repeat, rv = self.interact_core(
-                 ~~~~~~~~~~~~~~~~~~^
-        preloads=preloads,
-        ^^^^^^^^^^^^^^^^^^
-    ...<4 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    )
-    ^
-  File "renpy/display/core.py", line 2842, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 1279, in draw_screen
-    surftree = renpy.display.render.render_screen(
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        root_widget,
-        ^^^^^^^^^^^^
-        renpy.config.screen_width,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-        renpy.config.screen_height,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/screen.py", line 767, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 1159, in render
-    surf = render(d, width - x, rh, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/text/text.py", line 2768, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/text/text.py", line 837, in __init__
-    seg_glyphs, rtl = self.glyphs_paragraph(p, order)
-                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "renpy/text/text.py", line 1701, in glyphs_paragraph
-    rv.append((ts, ts.glyphs(s[offset:], self, l)))
-                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^  
-  File "renpy/text/text.py", line 371, in glyphs
-    fo = font.get_font(
-         ~~~~~~~~~~~~~^
-        self.font,
-        ^^^^^^^^^^
-    ...<11 lines>...
-        self.features,
-        ^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/text/font.py", line 750, in get_font
-    face = load_face(fn, shaper)
-           ~~~~~~~~~^^^^^^^^^^^^
-  File "renpy/text/font.py", line 668, in load_face
-    raise Exception("Could not find font {0!r}.".format(orig_fn))
-Exception: Could not find font 'fonts/mom.ttf'.
-
-While running game code:
-  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-Exception: Could not find font 'fonts/mom.ttf'.
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 22 ms
-Loading script took 62 ms
-Loading save slot metadata took 9 ms
-Loading persistent took 0 ms
-Running init code took 15 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 8 ms
-Backing up script files to '/Users/remymoreau/Library/RenPy/backups/Detective-at-44-Stanley-main':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 21 ms
-DPI scale factor: 1.000000
-Creating interface object took 2 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 129 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 90.5'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "renpy/common/00start.rpy", line 234, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 551, in script
-    python hide:
-  File "renpy/ast.py", line 1193, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1276, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/00keymap.rpy", line 551, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 565, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/loadsave.py", line 638, in load
-    log.unfreeze(roots, label="_after_load")
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/rollback.py", line 1094, in unfreeze
-    raise Exception("Could not load the game. Perhaps the script changed in an incompatible way.")
-Exception: Could not load the game. Perhaps the script changed in an incompatible way.
-
-While running game code:
-Exception: Could not load the game. Perhaps the script changed in an incompatible way.
-Resetting cache.
-Early init took 3 ms
-Loading error handling took 17 ms
-Loading script took 46 ms
-Loading save slot metadata took 8 ms
-Loading persistent took 0 ms
-Running init code took 15 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 3 ms
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 21 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 8 ms
-Analyze screens took 0 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 108 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 90.5'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "renpy/ast.py", line 1193, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1276, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-    ~~~~~~~~~~~^^
-  File "renpy/ui.py", line 306, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 2163, in interact
-    repeat, rv = self.interact_core(
-                 ~~~~~~~~~~~~~~~~~~^
-        preloads=preloads,
-        ^^^^^^^^^^^^^^^^^^
-    ...<4 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    )
-    ^
-  File "renpy/display/core.py", line 2842, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 1279, in draw_screen
-    surftree = renpy.display.render.render_screen(
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        root_widget,
-        ^^^^^^^^^^^^
-        renpy.config.screen_width,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-        renpy.config.screen_height,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/screen.py", line 767, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 1159, in render
-    surf = render(d, width - x, rh, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/text/text.py", line 2768, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/text/text.py", line 837, in __init__
-    seg_glyphs, rtl = self.glyphs_paragraph(p, order)
-                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "renpy/text/text.py", line 1701, in glyphs_paragraph
-    rv.append((ts, ts.glyphs(s[offset:], self, l)))
-                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^  
-  File "renpy/text/text.py", line 371, in glyphs
-    fo = font.get_font(
-         ~~~~~~~~~~~~~^
-        self.font,
-        ^^^^^^^^^^
-    ...<11 lines>...
-        self.features,
-        ^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/text/font.py", line 750, in get_font
-    face = load_face(fn, shaper)
-           ~~~~~~~~~^^^^^^^^^^^^
-  File "renpy/text/font.py", line 668, in load_face
-    raise Exception("Could not find font {0!r}.".format(orig_fn))
-Exception: Could not find font 'fonts/Mom.ttf'.
-
-While running game code:
-  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-Exception: Could not find font 'fonts/Mom.ttf'.
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 16 ms
-Loading script took 46 ms
-Loading save slot metadata took 8 ms
-Loading persistent took 0 ms
-Running init code took 17 ms
-Loading analysis data took 5 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 4 ms
-Backing up script files to '/Users/remymoreau/Library/RenPy/backups/Detective-at-44-Stanley-main':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 21 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 122 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 90.5'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "renpy/common/00start.rpy", line 234, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 551, in script
-    python hide:
-  File "renpy/ast.py", line 1193, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1276, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/00keymap.rpy", line 551, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 565, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/loadsave.py", line 638, in load
-    log.unfreeze(roots, label="_after_load")
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/rollback.py", line 1094, in unfreeze
-    raise Exception("Could not load the game. Perhaps the script changed in an incompatible way.")
-Exception: Could not load the game. Perhaps the script changed in an incompatible way.
-
-While running game code:
-Exception: Could not load the game. Perhaps the script changed in an incompatible way.
-Resetting cache.
-Early init took 3 ms
-Loading error handling took 12 ms
-Loading script took 40 ms
-Loading save slot metadata took 8 ms
-Loading persistent took 0 ms
-Running init code took 15 ms
-Loading analysis data took 8 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 5 ms
-Dump and make backups took 23 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 25 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 9 ms
-Analyze screens took 1 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 119 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 90.5'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 67, in script
-    jump case_2
-  File "renpy/ast.py", line 1938, in execute
-    rv = renpy.game.script.lookup(target)
-         ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
-  File "renpy/script.py", line 1217, in lookup
-    raise LabelNotFound(original)
-renpy.script.LabelNotFound: could not find label 'case_2'. Did you mean: 'case_1'?
-
-While running game code:
-  File "game/script.rpy", line 67, in script
-    jump case_2
-renpy.script.LabelNotFound: could not find label 'case_2'. Did you mean: 'case_1'?
-Resetting cache.
-Early init took 13 ms
-Loading error handling took 34 ms
-Loading script took 143 ms
-Loading save slot metadata took 135 ms
-Loading persistent took 0 ms
-Running init code took 34 ms
-Loading analysis data took 21 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5038 ms
-Backing up script files to '/Users/remymoreau/Library/RenPy/backups/Detective-at-44-Stanley-main':
-Dump and make backups took 59 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 42 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 8 ms
-Save screen analysis took 11 ms
 Save pyanalysis took 0 ms
 Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 222 ms
+Running _start took 3 ms
+Interface start took 6169 ms
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
+primary display bounds: (0, 0, 1366, 768)
 swap interval: 1 frames
 Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 90.5'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
+Vendor: 'Intel'
+Renderer: 'Intel(R) HD Graphics 500'
+Version: '4.6.0 - Build 31.0.101.2140'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 155, in script
+    menu:
+  File "renpy/ast.py", line 1825, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/menuexports.py", line 135, in menu
+    rv = renpy.store.menu(new_items)
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "renpy/exports/menuexports.py", line 418, in display_menu
+    rv = renpy.ui.interact(mouse="menu", type=type, roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2709, in interact_core
+    root_widget.visit_all(lambda d: d.per_interact())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 503, in visit_all
+    callback(self)
+    ~~~~~~~~^^^^^^
+  File "renpy/display/core.py", line 2709, in <lambda>
+    root_widget.visit_all(lambda d: d.per_interact())
+                                    ~~~~~~~~~~~~~~^^ 
+  File "renpy/display/screen.py", line 514, in per_interact
+    self.update()
+    ~~~~~~~~~~~^^
+  File "renpy/display/screen.py", line 715, in update
+    self.screen.function(**self.scope)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 182, in execute
+    vbox:
+  File "game/screens.rpy", line 183, in execute
+    for i in items:
+  File "game/screens.rpy", line 184, in execute
+    textbutton i.caption action i.action
+  File "renpy/ui.py", line 1003, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 2228, in __init__
+    self.set_text(text, scope, substitute)  # type: ignore
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^                
+  File "renpy/text/text.py", line 2367, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)  # type: ignore
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^                
+  File "renpy/substitutions.py", line 355, in substitute
+    s = interpolate(s, variables)  # type: ignore
+        ~~~~~~~~~~~^^^^^^^^^^^^^^                
+  File "renpy/substitutions.py", line 89, in interpolate
+    raise e
+  File "renpy/substitutions.py", line 81, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1308, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1301, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<none>", line 1, in <module>
+NameError: name 'hugo_asked_left' is not defined
+
+While running game code:
+  File "game/script.rpy", line 155, in script
+    menu:
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 182, in execute
+    vbox:
+  File "game/screens.rpy", line 183, in execute
+    for i in items:
+  File "game/screens.rpy", line 184, in execute
+    textbutton i.caption action i.action
+NameError: name 'hugo_asked_left' is not defined
 Resetting cache.
-Early init took 5 ms
-Loading error handling took 12 ms
-Loading script took 84 ms
-Loading save slot metadata took 22 ms
+Early init took 97 ms
+Loading error handling took 169 ms
+Loading script took 1394 ms
+Loading save slot metadata took 146 ms
 Loading persistent took 0 ms
-Running init code took 42 ms
-Loading analysis data took 6 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 9 ms
-Backing up script files to '/Users/remymoreau/Library/RenPy/backups/Detective-at-44-Stanley-main':
-Dump and make backups took 38 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 38 ms
+Running init code took 302 ms
+Loading analysis data took 49 ms
+Analyze and compile ATL took 8 ms
+Reloading save slot metadata took 64 ms
+Backing up script files to 'C:\\Users\\Student\\AppData\\Roaming/RenPy/backups\\Detective-at-44-Stanley':
+Dump and make backups took 461 ms
+Cleaning cache took 1 ms
+Making clean stores took 1 ms
+Initial gc took 775 ms
 DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 7 ms
+Init translation took 1 ms
 Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 8 ms
-Save screen analysis took 13 ms
+Load screen analysis took 3 ms
+Analyze screens took 150 ms
+Save screen analysis took 115 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 255 ms
+Save bytecode took 9 ms
+Running _start took 7 ms
+Interface start took 4169 ms
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
+primary display bounds: (0, 0, 1366, 768)
 swap interval: 1 frames
 Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 90.5'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
+Vendor: 'Intel'
+Renderer: 'Intel(R) HD Graphics 500'
+Version: '4.6.0 - Build 31.0.101.2140'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 10 ms
-Loading error handling took 15 ms
-Loading script took 89 ms
-Loading save slot metadata took 15 ms
-Loading persistent took 0 ms
-Running init code took 28 ms
-Loading analysis data took 6 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to '/Users/remymoreau/Library/RenPy/backups/Detective-at-44-Stanley-main':
-Dump and make backups took 37 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 34 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 7 ms
-Save screen analysis took 11 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 192 ms
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 90.5'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
-Maximum texture size: 4096x4096
+Full traceback:
+  File "game/script.rpy", line 155, in script
+    $ hugo_asked_left("3")
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 155, in <module>
+    $ hugo_asked_left("3")
+      ^^^^^^^^^^^^^^^     
+NameError: name 'hugo_asked_left' is not defined
+
+While running game code:
+  File "game/script.rpy", line 155, in script
+    $ hugo_asked_left("3")
+  File "game/script.rpy", line 155, in <module>
+    $ hugo_asked_left("3")
+      ^^^^^^^^^^^^^^^     
+NameError: name 'hugo_asked_left' is not defined
 Resetting cache.
-Early init took 4 ms
-Loading error handling took 14 ms
-Loading script took 72 ms
-Loading save slot metadata took 15 ms
+Early init took 67 ms
+Loading error handling took 78 ms
+Loading script took 746 ms
+Loading save slot metadata took 128 ms
 Loading persistent took 0 ms
-Running init code took 30 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 9 ms
-Dump and make backups took 37 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 37 ms
+Running init code took 228 ms
+Loading analysis data took 21 ms
+Analyze and compile ATL took 9 ms
+Reloading save slot metadata took 41 ms
+Dump and make backups took 315 ms
+Cleaning cache took 1 ms
+Making clean stores took 1 ms
+Initial gc took 378 ms
 DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 15 ms
-Analyze screens took 1 ms
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 2 ms
+Init translation took 27 ms
+Cleaning stores took 1 ms
+Load screen analysis took 160 ms
+Analyze screens took 6 ms
 Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 204 ms
+Running _start took 4 ms
+Interface start took 2053 ms
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
+primary display bounds: (0, 0, 1366, 768)
 swap interval: 1 frames
 Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 90.5'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
+Vendor: 'Intel'
+Renderer: 'Intel(R) HD Graphics 500'
+Version: '4.6.0 - Build 31.0.101.2140'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 785) drawable=(2940, 1570)
+
+Full traceback:
+  File "game/script.rpy", line 155, in script
+    $ hugo_asked_left("3")
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 155, in <module>
+    $ hugo_asked_left("3")
+      ^^^^^^^^^^^^^^^     
+NameError: name 'hugo_asked_left' is not defined
+
+While running game code:
+  File "game/script.rpy", line 155, in script
+    $ hugo_asked_left("3")
+  File "game/script.rpy", line 155, in <module>
+    $ hugo_asked_left("3")
+      ^^^^^^^^^^^^^^^     
+NameError: name 'hugo_asked_left' is not defined
+Resetting cache.
+Early init took 48 ms
+Loading error handling took 80 ms
+Loading script took 924 ms
+Loading save slot metadata took 127 ms
+Loading persistent took 0 ms
+Running init code took 244 ms
+Loading analysis data took 79 ms
+Analyze and compile ATL took 8 ms
+Reloading save slot metadata took 44 ms
+Backing up script files to 'C:\\Users\\Student\\AppData\\Roaming/RenPy/backups\\Detective-at-44-Stanley':
+Dump and make backups took 391 ms
+Cleaning cache took 1 ms
+Making clean stores took 6 ms
+Initial gc took 310 ms
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 1 ms
+Init translation took 26 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 65 ms
+Save screen analysis took 120 ms
+Save pyanalysis took 0 ms
+Save bytecode took 3 ms
+Running _start took 5 ms
+Interface start took 2503 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) HD Graphics 500'
+Version: '4.6.0 - Build 31.0.101.2140'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 53 ms
+Loading error handling took 79 ms
+Loading script took 1008 ms
+Loading save slot metadata took 131 ms
+Loading persistent took 0 ms
+Running init code took 255 ms
+Loading analysis data took 60 ms
+Analyze and compile ATL took 7 ms
+Reloading save slot metadata took 43 ms
+Backing up script files to 'C:\\Users\\Student\\AppData\\Roaming/RenPy/backups\\Detective-at-44-Stanley':
+Dump and make backups took 329 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 374 ms
+DPI scale factor: 1.000000
+Creating interface object took 2 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 5 ms
+Analyze screens took 95 ms
+Save screen analysis took 101 ms
+Save pyanalysis took 3 ms
+Save bytecode took 3 ms
+Running _start took 4 ms
+Interface start took 2052 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) HD Graphics 500'
+Version: '4.6.0 - Build 31.0.101.2140'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 199, in script
+    menu:
+  File "renpy/ast.py", line 1825, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/menuexports.py", line 135, in menu
+    rv = renpy.store.menu(new_items)
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "renpy/exports/menuexports.py", line 418, in display_menu
+    rv = renpy.ui.interact(mouse="menu", type=type, roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2709, in interact_core
+    root_widget.visit_all(lambda d: d.per_interact())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 503, in visit_all
+    callback(self)
+    ~~~~~~~~^^^^^^
+  File "renpy/display/core.py", line 2709, in <lambda>
+    root_widget.visit_all(lambda d: d.per_interact())
+                                    ~~~~~~~~~~~~~~^^ 
+  File "renpy/display/screen.py", line 514, in per_interact
+    self.update()
+    ~~~~~~~~~~~^^
+  File "renpy/display/screen.py", line 715, in update
+    self.screen.function(**self.scope)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 182, in execute
+    vbox:
+  File "game/screens.rpy", line 183, in execute
+    for i in items:
+  File "game/screens.rpy", line 184, in execute
+    textbutton i.caption action i.action
+  File "renpy/ui.py", line 1003, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 2228, in __init__
+    self.set_text(text, scope, substitute)  # type: ignore
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^                
+  File "renpy/text/text.py", line 2367, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)  # type: ignore
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^                
+  File "renpy/substitutions.py", line 355, in substitute
+    s = interpolate(s, variables)  # type: ignore
+        ~~~~~~~~~~~^^^^^^^^^^^^^^                
+  File "renpy/substitutions.py", line 89, in interpolate
+    raise e
+  File "renpy/substitutions.py", line 81, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1308, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1301, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<none>", line 1, in <module>
+NameError: name 'manon_asked_left' is not defined. Did you mean: 'hugo_asked_left'?
+
+While running game code:
+  File "game/script.rpy", line 199, in script
+    menu:
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 182, in execute
+    vbox:
+  File "game/screens.rpy", line 183, in execute
+    for i in items:
+  File "game/screens.rpy", line 184, in execute
+    textbutton i.caption action i.action
+NameError: name 'manon_asked_left' is not defined. Did you mean: 'hugo_asked_left'?
+Resetting cache.
+Early init took 136 ms
+Loading error handling took 100 ms
+Loading script took 1985 ms
+Loading save slot metadata took 183 ms
+Loading persistent took 4 ms
+Running init code took 293 ms
+Loading analysis data took 63 ms
+Analyze and compile ATL took 11 ms
+Reloading save slot metadata took 65 ms
+Backing up script files to 'C:\\Users\\Student\\AppData\\Roaming/RenPy/backups\\Detective-at-44-Stanley':
+Dump and make backups took 391 ms
+Cleaning cache took 0 ms
+Making clean stores took 3 ms
+Initial gc took 1203 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 3 ms
+Cleaning stores took 1 ms
+Load screen analysis took 3 ms
+Analyze screens took 139 ms
+Save screen analysis took 386 ms
+Save pyanalysis took 1 ms
+Save bytecode took 6 ms
+Running _start took 4 ms
+Interface start took 3915 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) HD Graphics 500'
+Version: '4.6.0 - Build 31.0.101.2140'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 200, in script
+    menu:
+  File "renpy/ast.py", line 1825, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/menuexports.py", line 135, in menu
+    rv = renpy.store.menu(new_items)
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "renpy/exports/menuexports.py", line 418, in display_menu
+    rv = renpy.ui.interact(mouse="menu", type=type, roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2709, in interact_core
+    root_widget.visit_all(lambda d: d.per_interact())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 503, in visit_all
+    callback(self)
+    ~~~~~~~~^^^^^^
+  File "renpy/display/core.py", line 2709, in <lambda>
+    root_widget.visit_all(lambda d: d.per_interact())
+                                    ~~~~~~~~~~~~~~^^ 
+  File "renpy/display/screen.py", line 514, in per_interact
+    self.update()
+    ~~~~~~~~~~~^^
+  File "renpy/display/screen.py", line 715, in update
+    self.screen.function(**self.scope)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 182, in execute
+    vbox:
+  File "game/screens.rpy", line 183, in execute
+    for i in items:
+  File "game/screens.rpy", line 184, in execute
+    textbutton i.caption action i.action
+  File "renpy/ui.py", line 1003, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 2228, in __init__
+    self.set_text(text, scope, substitute)  # type: ignore
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^                
+  File "renpy/text/text.py", line 2367, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)  # type: ignore
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^                
+  File "renpy/substitutions.py", line 355, in substitute
+    s = interpolate(s, variables)  # type: ignore
+        ~~~~~~~~~~~^^^^^^^^^^^^^^                
+  File "renpy/substitutions.py", line 89, in interpolate
+    raise e
+  File "renpy/substitutions.py", line 81, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1308, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1301, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<none>", line 1, in <module>
+NameError: name 'manon_asked_left' is not defined. Did you mean: 'hugo_asked_left'?
+
+While running game code:
+  File "game/script.rpy", line 200, in script
+    menu:
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 179, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 182, in execute
+    vbox:
+  File "game/screens.rpy", line 183, in execute
+    for i in items:
+  File "game/screens.rpy", line 184, in execute
+    textbutton i.caption action i.action
+NameError: name 'manon_asked_left' is not defined. Did you mean: 'hugo_asked_left'?
+Resetting cache.
+Early init took 64 ms
+Loading error handling took 101 ms
+Loading script took 833 ms
+Loading save slot metadata took 127 ms
+Loading persistent took 1 ms
+
+File "game/script.rpy", line 202: expected menuitem
+    $ manon_asked_left = 7 - len(manon_asked)
+    ^
+DPI scale factor: 1.000000
+Interface start took 2182 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) HD Graphics 500'
+Version: '4.6.0 - Build 31.0.101.2140'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 270 ms
+Loading error handling took 495 ms
+Loading script took 1764 ms
+Loading save slot metadata took 142 ms
+Loading persistent took 0 ms
+ - Init at renpy/common/00library.rpy:456 took 315 ms.
+Running init code took 583 ms
+Loading analysis data took 19 ms
+Analyze and compile ATL took 7 ms
+Reloading save slot metadata took 54 ms
+Backing up script files to 'C:\\Users\\Student\\AppData\\Roaming/RenPy/backups\\Detective-at-44-Stanley':
+Dump and make backups took 378 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 333 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 1 ms
+Cleaning stores took 26 ms
+Load screen analysis took 2 ms
+Analyze screens took 69 ms
+Save screen analysis took 100 ms
+Save pyanalysis took 1 ms
+Save bytecode took 7 ms
+Running _start took 10 ms
+Interface start took 3776 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) HD Graphics 500'
+Version: '4.6.0 - Build 31.0.101.2140'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 421 ms
+Loading error handling took 493 ms
+Loading script took 2026 ms
+Loading save slot metadata took 205 ms
+Loading persistent took 0 ms
+Running init code took 290 ms
+Loading analysis data took 66 ms
+Analyze and compile ATL took 7 ms
+Reloading save slot metadata took 63 ms
+Backing up script files to 'C:\\Users\\Student\\AppData\\Roaming/RenPy/backups\\Detective-at-44-Stanley':
+Dump and make backups took 1000 ms
+Cleaning cache took 0 ms
+Making clean stores took 2 ms
+Initial gc took 1209 ms
+DPI scale factor: 1.000000
+Creating interface object took 2 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 133 ms
+Save screen analysis took 217 ms
+Save pyanalysis took 0 ms
+Save bytecode took 4 ms
+Running _start took 7 ms
+Interface start took 7815 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) HD Graphics 500'
+Version: '4.6.0 - Build 31.0.101.2140'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 122 ms
+Loading error handling took 155 ms
+Loading script took 1657 ms
+Loading save slot metadata took 258 ms
+Loading persistent took 1 ms
+ - Init at renpy/common/00updater.rpy:1915 took 253 ms.
+ - Init at game/screens.rpy:179 took 1043 ms.
+ - Init at game/gui.rpy:11 took 1390 ms.
+ - Init at game/gui.rpy:360 took 518 ms.
+ - Init at renpy/common/00library.rpy:456 took 365 ms.
+Running init code took 4565 ms
+Loading analysis data took 203 ms
+Analyze and compile ATL took 13 ms
+Reloading save slot metadata took 133 ms
+Backing up script files to 'C:\\Users\\Student\\AppData\\Roaming/RenPy/backups\\Detective-at-44-Stanley':
+Dump and make backups took 468 ms
+Cleaning cache took 0 ms
+Making clean stores took 2 ms
+Initial gc took 2582 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 12 ms
+Analyze screens took 252 ms
+Save screen analysis took 476 ms
+Save pyanalysis took 0 ms
+Save bytecode took 54 ms
+Running _start took 3 ms
+Interface start took 3950 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) HD Graphics 500'
+Version: '4.6.0 - Build 31.0.101.2140'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
 Maximum texture size: 4096x4096
