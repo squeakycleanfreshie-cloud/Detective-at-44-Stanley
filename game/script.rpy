@@ -9,10 +9,29 @@ define manon = Character("Manon Dubois")
 define cammile = Character("Cammile Russau")
 define jullien = Character("Jullien Moreau")
 
-image hugo = "images/hugo.png"
-image manon = "images/manon.png"
-image cammile = "images/cammile.png"
-image jullien = "images/jullien.png"
+image hugo = "hugo.png"
+image manon = "manon.png"
+image cammile = "cammile.png"
+image jullien = "jullien.png"
+image mc_jean_paul = "mc_jean_paul.png"
+
+transform char_left:
+    zoom 0.6
+    xalign 0.2
+    yalign 1.0
+
+transform char_right:
+    zoom 0.6
+    xalign 0.8
+    yalign 1.0
+
+transform talker:
+    zoom 0.62
+    alpha 1.0
+
+transform listener:
+    zoom 0.54
+    alpha 0.7
 
 default hugo_asked = set()
 default manon_asked = set()
@@ -24,7 +43,7 @@ define config.main_menu_music = "audio/music.mp3"
 label start:
 
     play music "audio/music.mp3" loop
-    
+
     n "Septemer 2nd 1945, the day the second world war ended and the day the world thought it would see peace"
     n "But that was not the case, especially in the small city of Saintclairemont where crime has reached a record high"
     n "And that is where you come in"
@@ -139,18 +158,37 @@ label case_1:
     jump suspect_lineup_label
 
 label suspect_lineup_label:
+    hide mc_jean_paul
+    hide hugo
+    hide manon
+    hide cammile
+    hide jullien
     call screen suspect_lineup
 
 
 label interrogate_hugo:
     $ questioned.add("hugo")
+    hide manon
+    hide cammile
+    hide jullien
     if len(hugo_asked) == 0:
+        show mc_jean_paul at char_left, talker
+        show hugo at char_right, listener
         n "You question Hugo."
         n "Hugo wears glasses, and has sweaty forehead"
         mc "Hello Mr.Bernard, how are you today?"
+        show hugo at char_right, talker
+        show mc_jean_paul at char_left, listener
         hugo "I’m ok, thank you. How about you?"
+        show mc_jean_paul at char_left, talker
+        show hugo at char_right, listener
         mc "I’m fine. I have brought you here today to ask a few questions."
+        show hugo at char_right, talker
+        show mc_jean_paul at char_left, listener
         hugo "Okay, fine."
+    else:
+        show mc_jean_paul at char_left, listener
+        show hugo at char_right, listener
     jump hugo_menu
 
 label hugo_menu:
@@ -165,30 +203,57 @@ label hugo_menu:
 
         "Did you notice that Mr Dubois was gone from later than normal on the date of his death?" if "q1" not in hugo_asked:
             $ hugo_asked.add("q1")
+            show mc_jean_paul at char_left, talker
+            show hugo at char_right, listener
             mc "Did you notice that Mr Dubois was gone from later than normal on the date of his death?"
+            show hugo at char_right, talker
+            show mc_jean_paul at char_left, listener
             hugo "Yes. He left at 12:00, I heard him talking to other co-workers, saying he was tired and needed a rest, just him and a glass of wine."
 
         "Did Mr Dubois normally leave from work early?" if "q2" not in hugo_asked:
             $ hugo_asked.add("q2")
+            show mc_jean_paul at char_left, talker
+            show hugo at char_right, listener
             mc "Did Mr Dubois normally leave from work early?"
+            show hugo at char_right, talker
+            show mc_jean_paul at char_left, listener
             hugo "Yes. I don't beleive that he worked very hard, from my experience as being his colleuge."
+            show mc_jean_paul at char_left, talker
+            show hugo at char_right, listener
             mc "And how long have you known him?"
+            show hugo at char_right, talker
+            show mc_jean_paul at char_left, listener
             hugo "I have been working at Gabriel Enterprise for 3 years now, just when I met Pierre."
 
         "Did you an Mr Dubois get along well?" if "q3" not in hugo_asked:
             $ hugo_asked.add("q3")
+            show mc_jean_paul at char_left, talker
+            show hugo at char_right, listener
             mc "Did you an Mr Dubois get along well?"
+            show hugo at char_right, talker
+            show mc_jean_paul at char_left, listener
             hugo "If you would like my honest oppinion, well. No not really. Pierre was just very stubborn, and he wouldn't listen to any of my ideas."
             n "Hugo looks away for a moment."
 
         "Where were you between 3pm and 4pm that day?" if "q4" not in hugo_asked:
             $ hugo_asked.add("q4")
+            show mc_jean_paul at char_left, talker
+            show hugo at char_right, listener
             mc "Where were you between 3pm and 4pm that day?"
-            jullien "I was at the vineyard. I had work to finish there, and I did not leave until later that afternoon."
+            show hugo at char_right, talker
+            show mc_jean_paul at char_left, listener
             hugo "I was in the office. Working."
+            show mc_jean_paul at char_left, talker
+            show hugo at char_right, listener
             mc "Can anybody vouch for you?"
+            show hugo at char_right, talker
+            show mc_jean_paul at char_left, listener
             hugo "I beleive in this case, no. There was a staff lunch party that I didn't attend."
+            show mc_jean_paul at char_left, talker
+            show hugo at char_right, listener
             mc "Why not?"
+            show hugo at char_right, talker
+            show mc_jean_paul at char_left, listener
             hugo "I don't like those sort of things. Talking to people who are less inteligent than me bores me."
 
     jump hugo_menu
@@ -196,32 +261,26 @@ label hugo_menu:
 
 label interrogate_manon:
     $ questioned.add("manon")
-    if len(manon_asked) == 0:
-        n "You question Manon."
-    jump manon_menu
-
-label interrogate_manon:
-    $ questioned.add("manon")
     hide hugo
     hide cammile
     hide jullien
     if len(manon_asked) == 0:
-        show mc at char_left, talker
+        show mc_jean_paul at char_left, talker
         show manon at char_right, listener
         n "You question Manon."
         n "Manon has tired eyes, and holds herself very still, hands folded in her lap"
         mc "Hello Mrs. Dubois, thank you for coming in. I know this is difficult."
         show manon at char_right, talker
-        show mc at char_left, listener
+        show mc_jean_paul at char_left, listener
         manon "Of course. Anything to help find who did this to him."
-        show mc at char_left, talker
+        show mc_jean_paul at char_left, talker
         show manon at char_right, listener
         mc "I appreciate that. I just have a few questions."
         show manon at char_right, talker
-        show mc at char_left, listener
+        show mc_jean_paul at char_left, listener
         manon "Go ahead."
     else:
-        show mc at char_left, listener
+        show mc_jean_paul at char_left, listener
         show manon at char_right, listener
     jump manon_menu
 
@@ -229,7 +288,7 @@ label manon_menu:
     if len(manon_asked) >= 5:
         jump suspect_lineup_label
 
-    $ manon_asked_left = 7 - len(manon_asked)
+    $ manon_asked_left = 5 - len(manon_asked)
 
     menu:
         "Pick a question to ask Manon. ([manon_asked_left] left)":
@@ -237,68 +296,68 @@ label manon_menu:
 
         "Where were you between 3pm and 4pm before you left to walk the dog?" if "q1" not in manon_asked:
             $ manon_asked.add("q1")
-            show mc at char_left, talker
+            show mc_jean_paul at char_left, talker
             show manon at char_right, listener
             mc "Where were you between 3pm and 4pm before you left to walk the dog?"
             show manon at char_right, talker
-            show mc at char_left, listener
+            show mc_jean_paul at char_left, listener
             manon "I was home, tidying up. Pierre wasn't back from work yet."
 
         "What time did you actually leave to walk the dog?" if "q2" not in manon_asked:
             $ manon_asked.add("q2")
-            show mc at char_left, talker
+            show mc_jean_paul at char_left, talker
             show manon at char_right, listener
             mc "What time did you actually leave to walk the dog?"
             show manon at char_right, talker
-            show mc at char_left, listener
+            show mc_jean_paul at char_left, listener
             manon "Around 3:10, like I told the officer. He gets restless around then, needs his walk."
 
         "Did Pierre have any prescriptions or medications in the house?" if "q3" not in manon_asked:
             $ manon_asked.add("q3")
-            show mc at char_left, talker
+            show mc_jean_paul at char_left, talker
             show manon at char_right, listener
             mc "Did Pierre have any prescriptions or medications in the house?"
             show manon at char_right, talker
-            show mc at char_left, listener
+            show mc_jean_paul at char_left, listener
             manon "No, nothing like that. He was healthy. Careful about that sort of thing, actually."
 
         "Whose eye drops were in the bathroom? Did you know Hugo well?" if "q4" not in manon_asked:
             $ manon_asked.add("q4")
-            show mc at char_left, talker
+            show mc_jean_paul at char_left, talker
             show manon at char_right, listener
             mc "Whose eye drops were in the bathroom? Did you know Hugo well?"
             show manon at char_right, talker
-            show mc at char_left, listener
+            show mc_jean_paul at char_left, listener
             manon "Those must be Hugo's. He stayed with us once, months ago, before things went sour between him and Pierre."
             manon "I don't know him well beyond a few dinners. Pierre handled that friendship, not me."
 
         "What did Pierre say about him? Was Pierre acting normal that morning before he left for work?" if "q5" not in manon_asked:
             $ manon_asked.add("q5")
-            show mc at char_left, talker
+            show mc_jean_paul at char_left, talker
             show manon at char_right, listener
             mc "What did Pierre say about him? Was Pierre acting normal that morning before he left for work?"
             show manon at char_right, talker
-            show mc at char_left, listener
+            show mc_jean_paul at char_left, listener
             manon "Pierre never had a kind word for Hugo lately. Said he couldn't trust him with the business anymore."
             manon "That morning was normal though. Coffee, complaints about work, the usual."
 
         "Why no prenup or marriage after this long together?" if "q6" not in manon_asked:
             $ manon_asked.add("q6")
-            show mc at char_left, talker
+            show mc_jean_paul at char_left, talker
             show manon at char_right, listener
             mc "Why no prenup or marriage after this long together?"
             show manon at char_right, talker
-            show mc at char_left, listener
+            show mc_jean_paul at char_left, listener
             manon "We just never got around to it. Pierre always said there was no rush, that it didn't change how he felt."
             manon "I never pushed. I suppose now I wish I had."
 
         "Who else had access to the house that day?" if "q7" not in manon_asked:
             $ manon_asked.add("q7")
-            show mc at char_left, talker
+            show mc_jean_paul at char_left, talker
             show manon at char_right, listener
             mc "Who else had access to the house that day?"
             show manon at char_right, talker
-            show mc at char_left, listener
+            show mc_jean_paul at char_left, listener
             manon "Just the two of us, really. Cammile has a spare key for emergencies, next door."
             manon "And Julien visits sometimes, though I don't think he has his own key."
 
@@ -307,8 +366,16 @@ label manon_menu:
 
 label interrogate_cammile:
     $ questioned.add("cammile")
+    hide hugo
+    hide manon
+    hide jullien
     if len(cammile_asked) == 0:
+        show mc_jean_paul at char_left, talker
+        show cammile at char_right, listener
         n "You question Cammile."
+    else:
+        show mc_jean_paul at char_left, listener
+        show cammile at char_right, listener
     jump cammile_menu
 
 label cammile_menu:
@@ -323,27 +390,47 @@ label cammile_menu:
 
         "You said you were home all day — did you see Pierre come back before 4:14pm?" if "q1" not in cammile_asked:
             $ cammile_asked.add("q1")
+            show mc_jean_paul at char_left, talker
+            show cammile at char_right, listener
             mc "You said you were home all day — did you see Pierre come back before 4:14pm?"
+            show cammile at char_right, talker
+            show mc_jean_paul at char_left, listener
             cammile "No. I did not see him come back. I heard a car around 3:20, but I cannot say who it belonged to."
 
         "Did you see anyone else visit the house that afternoon?" if "q2" not in cammile_asked:
             $ cammile_asked.add("q2")
+            show mc_jean_paul at char_left, talker
+            show cammile at char_right, listener
             mc "Did you see anyone else visit the house that afternoon?"
+            show cammile at char_right, talker
+            show mc_jean_paul at char_left, listener
             cammile "I saw someone walking towards the Dubois house around 3:25pm. It looked like a man wearing a dark jacket, but I did not see his face."
 
         "How far is your place from theirs — could you hear or see the front door?" if "q3" not in cammile_asked:
             $ cammile_asked.add("q3")
+            show mc_jean_paul at char_left, talker
+            show cammile at char_right, listener
             mc "How far is your place from theirs — could you hear or see the front door?"
+            show cammile at char_right, talker
+            show mc_jean_paul at char_left, listener
             cammile "We are close enough for me to hear things outside. I can also see part of their front path from my window."
 
         "Did your complaints about the dog ever turn into direct conflict with Pierre or just Manon?" if "q4" not in cammile_asked:
             $ cammile_asked.add("q4")
+            show mc_jean_paul at char_left, talker
+            show cammile at char_right, listener
             mc "Did your complaints about the dog ever turn into direct conflict with Pierre or just Manon?"
+            show cammile at char_right, talker
+            show mc_jean_paul at char_left, listener
             cammile "I'm reasonable enough to sense that they can't really do anything about a pesky disobediant dog"
 
         "Do you have any medical background, or access to medication like eye drops/heart drugs?" if "q5" not in cammile_asked:
             $ cammile_asked.add("q5")
+            show mc_jean_paul at char_left, talker
+            show cammile at char_right, listener
             mc "Do you have any medical background, or access to medication like eye drops/heart drugs?"
+            show cammile at char_right, talker
+            show mc_jean_paul at char_left, listener
             cammile "I wanted to be a Docter as a kid but I was born in the wrong city"
 
     jump cammile_menu
@@ -351,8 +438,16 @@ label cammile_menu:
 
 label interrogate_jullien:
     $ questioned.add("jullien")
+    hide hugo
+    hide manon
+    hide cammile
     if len(jullien_asked) == 0:
+        show mc_jean_paul at char_left, talker
+        show jullien at char_right, listener
         n "You question Jullien."
+    else:
+        show mc_jean_paul at char_left, listener
+        show jullien at char_right, listener
     jump jullien_menu
 
 label jullien_menu:
@@ -367,27 +462,47 @@ label jullien_menu:
 
         "Where were you between 3pm and 4pm that day?" if "q1" not in jullien_asked:
             $ jullien_asked.add("q1")
+            show mc_jean_paul at char_left, talker
+            show jullien at char_right, listener
             mc "Where were you between 3pm and 4pm that day?"
+            show jullien at char_right, talker
+            show mc_jean_paul at char_left, listener
             jullien "I was working in my Vineyard."
 
         "Have you spoken to Pierre recently about the will or the vineyard?" if "q2" not in jullien_asked:
             $ jullien_asked.add("q2")
+            show mc_jean_paul at char_left, talker
+            show jullien at char_right, listener
             mc "Have you spoken to Pierre recently about the will or the vineyard?"
+            show jullien at char_right, talker
+            show mc_jean_paul at char_left, listener
             jullien "Yes, we spoke about it. I was angry that I could not sell the vineyard, but I never threatened him."
 
         "Do you blame Pierre for how the inheritance was split?" if "q3" not in jullien_asked:
             $ jullien_asked.add("q3")
+            show mc_jean_paul at char_left, talker
+            show jullien at char_right, listener
             mc "Do you blame Pierre for how the inheritance was split?"
+            show jullien at char_right, talker
+            show mc_jean_paul at char_left, listener
             jullien "I blamed our father more than Pierre. The will was his decision. Pierre did not write it."
 
         "Did you visit the house that day, or know Pierre's schedule?" if "q4" not in jullien_asked:
             $ jullien_asked.add("q4")
+            show mc_jean_paul at char_left, talker
+            show jullien at char_right, listener
             mc "Did you visit the house that day, or know Pierre's schedule?"
+            show jullien at char_right, talker
+            show mc_jean_paul at char_left, listener
             jullien "No. I did not visit the house. I knew he worked until around noon sometimes, but I did not know when he would return home."
 
         "Do you have access to any of Pierre's medications, or Manon's?" if "q5" not in jullien_asked:
             $ jullien_asked.add("q5")
+            show mc_jean_paul at char_left, talker
+            show jullien at char_right, listener
             mc "Do you have access to any of Pierre's medications, or Manon's?"
+            show jullien at char_right, talker
+            show mc_jean_paul at char_left, listener
             jullien "No. I have never had access to their medication, and I have never needed it."
 
     jump jullien_menu
@@ -470,5 +585,5 @@ label accuse_jullien:
     show text "Case UnSolved" with dissolve
     pause(2.0)
     hide text
-    
+
     return

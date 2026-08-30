@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 202: expected menuitem
-    $ manon_asked_left = 7 - len(manon_asked)
-    ^
+The label interrogate_manon is defined twice, at File "game/script.rpy", line 197:
+label interrogate_manon:
+and File "game/script.rpy", line 203:
+label interrogate_manon:
+
 
 Ren'Py Version: Ren'Py 8.5.3.26051504
-Sat Aug 29 16:23:49 2026
+Sun Aug 30 17:13:11 2026

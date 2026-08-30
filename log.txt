@@ -1,53 +1,26 @@
-2026-08-30 06:09:48 UTC
-Windows-10-10.0.19041-SP0
+2026-08-30 08:10:52 UTC
+macOS-26.6-arm64-arm-64bit
 Ren'Py 8.5.3.26051504
 
-Early init took 239 ms
-Loading error handling took 219 ms
-Loading script took 4201 ms
-Loading save slot metadata took 162 ms
+Early init took 28 ms
+Loading error handling took 18 ms
+Loading script took 55 ms
+Loading save slot metadata took 16 ms
 Loading persistent took 0 ms
-Running init code took 398 ms
-Loading analysis data took 12 ms
-Analyze and compile ATL took 4 ms
-Reloading save slot metadata took 47 ms
-Backing up script files to 'C:\\Users\\Student\\AppData\\Roaming/RenPy/backups\\Detective-at-44-Stanley':
-Dump and make backups took 256 ms
+Running init code took 26 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Dump and make backups took 22 ms
 Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 362 ms
+Making clean stores took 0 ms
+Initial gc took 17 ms
 DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 15 ms
-Init translation took 1 ms
+Creating interface object took 0 ms
+Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 5 ms
-Analyze screens took 124 ms
-Save screen analysis took 85 ms
-Save pyanalysis took 0 ms
-Save bytecode took 129 ms
-Running _start took 3 ms
-Audio and video init failed. Proceeding anyway.
-Traceback (most recent call last):
-  File "C:\Users\Student\Documents\Game Dev Software\renpy-8.5.2-sdk\renpy\audio\audio.py", line 1121, in init
-    renpysound.init(
-  File "renpy/audio/renpysound.pyx", line 467, in renpy.audio.renpysound.init
-  File "renpy/audio/renpysound.pyx", line 112, in renpy.audio.renpysound.check_error
-Exception: WASAPI can't find requested audio endpoint: Element not found.
-Interface start took 2499 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) HD Graphics 500'
-Version: '4.6.0 - Build 31.0.101.2140'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
-Maximum texture size: 4096x4096
-Cleaning stores took 2 ms
-Load screen analysis took 70 ms
+Load screen analysis took 9 ms
 Analyze screens took 0 ms
-Running _start took 5 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
