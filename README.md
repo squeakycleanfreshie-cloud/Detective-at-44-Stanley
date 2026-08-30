@@ -10,3 +10,4 @@ We were inspired by 1950's france noir detective theme
 ## Development
 This took 7 days to make but we had some technical difficulties and school so we only made it in around 5.
 
+https://hackatime.hackclub.com/api/v1/badge/U0AHYURUG92/squeakycleanfreshie-cloud/Detective-at-44-Stanley
