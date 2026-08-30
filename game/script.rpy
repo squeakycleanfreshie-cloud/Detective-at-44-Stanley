@@ -200,53 +200,107 @@ label interrogate_manon:
         n "You question Manon."
     jump manon_menu
 
+label interrogate_manon:
+    $ questioned.add("manon")
+    hide hugo
+    hide cammile
+    hide jullien
+    if len(manon_asked) == 0:
+        show mc at char_left, talker
+        show manon at char_right, listener
+        n "You question Manon."
+        n "Manon has tired eyes, and holds herself very still, hands folded in her lap"
+        mc "Hello Mrs. Dubois, thank you for coming in. I know this is difficult."
+        show manon at char_right, talker
+        show mc at char_left, listener
+        manon "Of course. Anything to help find who did this to him."
+        show mc at char_left, talker
+        show manon at char_right, listener
+        mc "I appreciate that. I just have a few questions."
+        show manon at char_right, talker
+        show mc at char_left, listener
+        manon "Go ahead."
+    else:
+        show mc at char_left, listener
+        show manon at char_right, listener
+    jump manon_menu
+
 label manon_menu:
     if len(manon_asked) >= 5:
         jump suspect_lineup_label
 
-    $ manon_asked_left = 5 - len(manon_asked)
+    $ manon_asked_left = 7 - len(manon_asked)
 
     menu:
-
-
         "Pick a question to ask Manon. ([manon_asked_left] left)":
             pass
 
         "Where were you between 3pm and 4pm before you left to walk the dog?" if "q1" not in manon_asked:
             $ manon_asked.add("q1")
+            show mc at char_left, talker
+            show manon at char_right, listener
             mc "Where were you between 3pm and 4pm before you left to walk the dog?"
-            manon "I was at home with Pierre. He was resting in the bedroom while I was cleaning the kitchen."
+            show manon at char_right, talker
+            show mc at char_left, listener
+            manon "I was home, tidying up. Pierre wasn't back from work yet."
 
         "What time did you actually leave to walk the dog?" if "q2" not in manon_asked:
             $ manon_asked.add("q2")
+            show mc at char_left, talker
+            show manon at char_right, listener
             mc "What time did you actually leave to walk the dog?"
-            manon "Around 3:10pm. I remember because I checked the clock before I left."
+            show manon at char_right, talker
+            show mc at char_left, listener
+            manon "Around 3:10, like I told the officer. He gets restless around then, needs his walk."
 
         "Did Pierre have any prescriptions or medications in the house?" if "q3" not in manon_asked:
             $ manon_asked.add("q3")
+            show mc at char_left, talker
+            show manon at char_right, listener
             mc "Did Pierre have any prescriptions or medications in the house?"
-            manon "No. Pierre did not have any prescriptions. He never liked taking medication unless he really needed it."
+            show manon at char_right, talker
+            show mc at char_left, listener
+            manon "No, nothing like that. He was healthy. Careful about that sort of thing, actually."
 
         "Whose eye drops were in the bathroom? Did you know Hugo well?" if "q4" not in manon_asked:
             $ manon_asked.add("q4")
+            show mc at char_left, talker
+            show manon at char_right, listener
             mc "Whose eye drops were in the bathroom? Did you know Hugo well?"
-            manon "The eye drops were not Pierre's. They belonged to Hugo. He left them here a few weeks ago after he came over to talk about work."
-            manon "I know Hugo because he worked with Pierre. They were never really friends."
+            show manon at char_right, talker
+            show mc at char_left, listener
+            manon "Those must be Hugo's. He stayed with us once, months ago, before things went sour between him and Pierre."
+            manon "I don't know him well beyond a few dinners. Pierre handled that friendship, not me."
 
         "What did Pierre say about him? Was Pierre acting normal that morning before he left for work?" if "q5" not in manon_asked:
             $ manon_asked.add("q5")
+            show mc at char_left, talker
+            show manon at char_right, listener
             mc "What did Pierre say about him? Was Pierre acting normal that morning before he left for work?"
-            manon "Pierre said Hugo was becoming difficult to work with. He was angry that morning, but he still left for work like normal."
+            show manon at char_right, talker
+            show mc at char_left, listener
+            manon "Pierre never had a kind word for Hugo lately. Said he couldn't trust him with the business anymore."
+            manon "That morning was normal though. Coffee, complaints about work, the usual."
 
         "Why no prenup or marriage after this long together?" if "q6" not in manon_asked:
             $ manon_asked.add("q6")
+            show mc at char_left, talker
+            show manon at char_right, listener
             mc "Why no prenup or marriage after this long together?"
-            manon "We never thought we needed one. Pierre trusted me and I trusted him. I also knew that if something happened to him, I would not receive his money."
+            show manon at char_right, talker
+            show mc at char_left, listener
+            manon "We just never got around to it. Pierre always said there was no rush, that it didn't change how he felt."
+            manon "I never pushed. I suppose now I wish I had."
 
         "Who else had access to the house that day?" if "q7" not in manon_asked:
             $ manon_asked.add("q7")
+            show mc at char_left, talker
+            show manon at char_right, listener
             mc "Who else had access to the house that day?"
-            manon "Me and Pierre had keys. Hugo also had one from when he came here for business meetings. Pierre told me he gave it to him months ago."
+            show manon at char_right, talker
+            show mc at char_left, listener
+            manon "Just the two of us, really. Cammile has a spare key for emergencies, next door."
+            manon "And Julien visits sometimes, though I don't think he has his own key."
 
     jump manon_menu
 
