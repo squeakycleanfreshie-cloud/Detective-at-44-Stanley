@@ -1,4 +1,3 @@
-<img width="946" height="657" alt="Screenshot 2026-08-30 at 6 24 49 pm" src="https://github.com/user-attachments/assets/ebdf3db5-91eb-4e3a-9a49-7986c7322a2e" />
 # Detective at 44 Stanley
 Detective at 44 Stanley is a short mystery/detective game made in Renpy for the Brakeys game jam.
 
