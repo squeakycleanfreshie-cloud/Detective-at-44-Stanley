@@ -1,3 +1,12 @@
 # Detective at 44 Stanley
-Detective at 44 Stanley is a short mystery/detective game made in godot for the Brakeys game jam.
-<img width="13412" height="13032" alt="Game Title Cards (1)" src="https://github.com/user-attachments/assets/46ea8f14-8443-4caf-ad75-8905333ddbdd" />
+Detective at 44 Stanley is a short mystery/detective game made in Renpy for the Brakeys game jam.
+
+## How to Play
+Go to the itch.io link (https://remymorea.itch.io/detective-at-44-stanley), or download the folder and put it into your renpy folder.
+
+## Inspirations
+We were inspired by 1950's france noir detective theme
+
+## Development
+This took 7 days to make but we had some technical difficulties and school so we only made it in around 5.
+
