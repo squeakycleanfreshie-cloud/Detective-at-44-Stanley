@@ -1517,6 +1517,9 @@ screen suspect_lineup:
                     vbox:
                         xalign 0.5
                         add sid:
+                            xsize 150
+                            ysize 220
+                            fit "contain"
                             alpha (0.35 if sid in questioned else 1.0)
                         frame:
                             background "#000000"
