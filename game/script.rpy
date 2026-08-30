@@ -174,10 +174,12 @@ label hugo_menu:
             $ hugo_asked.add("q3")
             mc "Did you an Mr Dubois get along well?"
             hugo "If you would like my honest oppinion, well. No not really. Pierre was just very stubborn, and he wouldn't listen to any of my ideas."
+            n "Hugo looks away for a moment."
 
         "Where were you between 3pm and 4pm that day?" if "q4" not in hugo_asked:
             $ hugo_asked.add("q4")
             mc "Where were you between 3pm and 4pm that day?"
+            jullien "I was at the vineyard. I had work to finish there, and I did not leave until later that afternoon."
             hugo "I was in the office. Working."
             mc "Can anybody vouch for you?"
             hugo "I beleive in this case, no. There was a staff lunch party that I didn't attend."
@@ -208,30 +210,38 @@ label manon_menu:
         "Where were you between 3pm and 4pm before you left to walk the dog?" if "q1" not in manon_asked:
             $ manon_asked.add("q1")
             mc "Where were you between 3pm and 4pm before you left to walk the dog?"
+            manon "I was at home with Pierre. He was resting in the bedroom while I was cleaning the kitchen."
 
         "What time did you actually leave to walk the dog?" if "q2" not in manon_asked:
             $ manon_asked.add("q2")
             mc "What time did you actually leave to walk the dog?"
+            manon "Around 3:10pm. I remember because I checked the clock before I left."
 
         "Did Pierre have any prescriptions or medications in the house?" if "q3" not in manon_asked:
             $ manon_asked.add("q3")
             mc "Did Pierre have any prescriptions or medications in the house?"
+            manon "No. Pierre did not have any prescriptions. He never liked taking medication unless he really needed it."
 
         "Whose eye drops were in the bathroom? Did you know Hugo well?" if "q4" not in manon_asked:
             $ manon_asked.add("q4")
             mc "Whose eye drops were in the bathroom? Did you know Hugo well?"
+            manon "The eye drops were not Pierre's. They belonged to Hugo. He left them here a few weeks ago after he came over to talk about work."
+            manon "I know Hugo because he worked with Pierre. They were never really friends."
 
         "What did Pierre say about him? Was Pierre acting normal that morning before he left for work?" if "q5" not in manon_asked:
             $ manon_asked.add("q5")
             mc "What did Pierre say about him? Was Pierre acting normal that morning before he left for work?"
+            manon "Pierre said Hugo was becoming difficult to work with. He was angry that morning, but he still left for work like normal."
 
         "Why no prenup or marriage after this long together?" if "q6" not in manon_asked:
             $ manon_asked.add("q6")
             mc "Why no prenup or marriage after this long together?"
+            manon "We never thought we needed one. Pierre trusted me and I trusted him. I also knew that if something happened to him, I would not receive his money."
 
         "Who else had access to the house that day?" if "q7" not in manon_asked:
             $ manon_asked.add("q7")
             mc "Who else had access to the house that day?"
+            manon "Me and Pierre had keys. Hugo also had one from when he came here for business meetings. Pierre told me he gave it to him months ago."
 
     jump manon_menu
 
@@ -255,22 +265,27 @@ label cammile_menu:
         "You said you were home all day — did you see Pierre come back before 4:14pm?" if "q1" not in cammile_asked:
             $ cammile_asked.add("q1")
             mc "You said you were home all day — did you see Pierre come back before 4:14pm?"
+            cammile "No. I did not see him come back. I heard a car around 3:20, but I cannot say who it belonged to."
 
         "Did you see anyone else visit the house that afternoon?" if "q2" not in cammile_asked:
             $ cammile_asked.add("q2")
             mc "Did you see anyone else visit the house that afternoon?"
+            cammile "I saw someone walking towards the Dubois house around 3:25pm. It looked like a man wearing a dark jacket, but I did not see his face."
 
         "How far is your place from theirs — could you hear or see the front door?" if "q3" not in cammile_asked:
             $ cammile_asked.add("q3")
             mc "How far is your place from theirs — could you hear or see the front door?"
+            cammile "We are close enough for me to hear things outside. I can also see part of their front path from my window."
 
         "Did your complaints about the dog ever turn into direct conflict with Pierre or just Manon?" if "q4" not in cammile_asked:
             $ cammile_asked.add("q4")
             mc "Did your complaints about the dog ever turn into direct conflict with Pierre or just Manon?"
+            cammile "I'm reasonable enough to sense that they can't really do anything about a pesky disobediant dog"
 
         "Do you have any medical background, or access to medication like eye drops/heart drugs?" if "q5" not in cammile_asked:
             $ cammile_asked.add("q5")
             mc "Do you have any medical background, or access to medication like eye drops/heart drugs?"
+            cammile "I wanted to be a Docter as a kid but I was born in the wrong city"
 
     jump cammile_menu
 
@@ -294,26 +309,87 @@ label jullien_menu:
         "Where were you between 3pm and 4pm that day?" if "q1" not in jullien_asked:
             $ jullien_asked.add("q1")
             mc "Where were you between 3pm and 4pm that day?"
+            jullien "I was working in my Vineyard."
 
         "Have you spoken to Pierre recently about the will or the vineyard?" if "q2" not in jullien_asked:
             $ jullien_asked.add("q2")
             mc "Have you spoken to Pierre recently about the will or the vineyard?"
+            jullien "Yes, we spoke about it. I was angry that I could not sell the vineyard, but I never threatened him."
 
         "Do you blame Pierre for how the inheritance was split?" if "q3" not in jullien_asked:
             $ jullien_asked.add("q3")
             mc "Do you blame Pierre for how the inheritance was split?"
+            jullien "I blamed our father more than Pierre. The will was his decision. Pierre did not write it."
 
         "Did you visit the house that day, or know Pierre's schedule?" if "q4" not in jullien_asked:
             $ jullien_asked.add("q4")
             mc "Did you visit the house that day, or know Pierre's schedule?"
+            jullien "No. I did not visit the house. I knew he worked until around noon sometimes, but I did not know when he would return home."
 
         "Do you have access to any of Pierre's medications, or Manon's?" if "q5" not in jullien_asked:
             $ jullien_asked.add("q5")
             mc "Do you have access to any of Pierre's medications, or Manon's?"
+            jullien "No. I have never had access to their medication, and I have never needed it."
 
     jump jullien_menu
 
 
 label accusation_screen_label:
-    "Accusation screen goes here."
+    n "You have questioned every suspect."
+    n "Now you must decide who murdered Pierre Dubois."
+
+    menu:
+        "Who do you accuse?"
+        "Hugo Bernard":
+            jump accuse_hugo
+        "Manon Dubois":
+            jump accuse_manon
+        "Cammile Russau":
+            jump accuse_cammile
+        "Jullien Moreau":
+            jump accuse_jullien
+
+
+label accuse_hugo:
+    n "You accuse Hugo Bernard of murdering Pierre Dubois."
+    mc "The evidence points towards Hugo."
+    mc "He knew Pierre, had access to the house, and his eye drops were found in the bathroom."
+    mc "Cammile also saw a man going towards the house around 3:25pm."
+    mc "Most importantly, Hugo claimed he was in the office between 3pm and 4pm with nobody able to confirm it."
+    mc "The atropine came from eye drops, and Hugo had access to them."
+    n "The evidence is enough."
+    n "Hugo Bernard was the murderer."
+    hugo "Wait... How did you figure it out?"
+    mc "You knew Pierre's schedule, you had a key to the house, and you had access to the drug that killed him."
+    mc "You thought nobody would connect the eye drops to you."
+    hugo "..."
+    n "Hugo had no answer."
+    n "Case #01 Solved."
+    return
+
+
+label accuse_manon:
+    n "You accuse Manon Dubois of murdering Pierre Dubois."
+    n "But the evidence does not support the accusation."
+    mc "Something is wrong with this conclusion."
+    n "You failed to identify the murderer."
+    n "Case #01 Unsolved."
+    return
+
+
+label accuse_cammile:
+    n "You accuse Cammile Russau of murdering Pierre Dubois."
+    n "But the evidence does not support the accusation."
+    mc "She had a reason to dislike the dog, but that does not explain the atropine."
+    n "You failed to identify the murderer."
+    n "Case #01 Unsolved."
+    return
+
+
+label accuse_jullien:
+    n "You accuse Jullien Moreau of murdering Pierre Dubois."
+    n "But the evidence does not support the accusation."
+    mc "He had a motive involving the vineyard, but no access to the drug or the house."
+    n "You failed to identify the murderer."
+    n "Case #01 Unsolved."
     return
