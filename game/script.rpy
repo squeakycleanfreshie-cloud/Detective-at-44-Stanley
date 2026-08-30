@@ -19,7 +19,12 @@ default manon_asked = set()
 default cammile_asked = set()
 default jullien_asked = set()
 
+define config.main_menu_music = "audio/music.mp3"
+
 label start:
+
+    play music "audio/music.mp3" loop
+    
     n "Septemer 2nd 1945, the day the second world war ended and the day the world thought it would see peace"
     n "But that was not the case, especially in the small city of Saintclairemont where crime has reached a record high"
     n "And that is where you come in"
@@ -64,7 +69,7 @@ label opening:
 
     menu:
         "What will you pick"
-        "Case #01":
+        "Case 1":
             jump case_1
         "Bonus: Officer Benjamin's Baguette Report":
             jump extra_1
@@ -365,6 +370,11 @@ label accuse_hugo:
     hugo "..."
     n "Hugo had no answer."
     n "Case #01 Solved."
+
+    show text "Case Solved" with dissolve
+    pause(2.0)
+    hide text
+
     return
 
 
@@ -374,6 +384,11 @@ label accuse_manon:
     mc "Something is wrong with this conclusion."
     n "You failed to identify the murderer."
     n "Case #01 Unsolved."
+
+    show text "Case UnSolved" with dissolve
+    pause(2.0)
+    hide text
+
     return
 
 
@@ -383,6 +398,11 @@ label accuse_cammile:
     mc "She had a reason to dislike the dog, but that does not explain the atropine."
     n "You failed to identify the murderer."
     n "Case #01 Unsolved."
+
+    show text "Case UnSolved" with dissolve
+    pause(2.0)
+    hide text
+
     return
 
 
@@ -392,4 +412,9 @@ label accuse_jullien:
     mc "He had a motive involving the vineyard, but no access to the drug or the house."
     n "You failed to identify the murderer."
     n "Case #01 Unsolved."
+
+    show text "Case UnSolved" with dissolve
+    pause(2.0)
+    hide text
+    
     return
